@@ -1,5 +1,5 @@
-import { View, Text, Image, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { Image, StyleSheet, Text, View } from "react-native";
 import { FoodItem } from "../src/services/foods";
 
 export default function FoodCard({ item }: { item: FoodItem }) {

@@ -9,13 +9,21 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Usamos sua localização para mostrar no mapa.",
+        "NSUserTrackingUsageDescription": "Usamos notificações para engajar você com lembretes."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
+       "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "POST_NOTIFICATIONS"
+      ],
       "edgeToEdgeEnabled": true
     },
     "web": {
@@ -33,8 +41,15 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+            [
+        "expo-notifications",
+        { "sounds": ["*"] } 
       ]
+
+
     ],
+    
     "experiments": {
       "typedRoutes": true
     }

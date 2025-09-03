@@ -1,5 +1,5 @@
-import { View, Text, Button, StyleSheet } from "react-native";
 import { router } from "expo-router";
+import { Button, StyleSheet, Text, View } from "react-native";
 
 export default function HomeScreen() {
   return (
@@ -7,6 +7,7 @@ export default function HomeScreen() {
       <Text style={styles.title}>Menu</Text>
       <Button title="Ir para Formulário" onPress={() => router.push("/form")} />
       <Button title="Sair" onPress={() => router.replace("/")} />
+      <Button title="Abrir Pedidos" onPress={() => router.push("/foods")} />
     </View>
   );
 }

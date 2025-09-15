@@ -1,12 +1,12 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useEffect, useMemo, useState } from "react";
 import {
-    ActivityIndicator, FlatList, SafeAreaView,
-    StyleSheet, Text, TextInput, View,
+  ActivityIndicator, FlatList, SafeAreaView,
+  StyleSheet, Text, TextInput, View,
 } from "react-native";
 import BottomNav from "../components/BottomNav";
-import Chip from "../components/Chip";
 import FoodCard from "../components/FoodCard";
+import Tip from "../components/Tip";
 import { FoodItem, getFoods } from "../src/services/foods";
 
 export default function FoodsScreen() {
@@ -63,7 +63,7 @@ export default function FoodsScreen() {
         contentContainerStyle={{ paddingHorizontal: 16 }}
         style={{ marginTop: 8 }}
         renderItem={({ item }) => (
-          <Chip label={item} active={cat === item} onPress={() => setCat(item)} />
+          <Tip label={item} active={cat === item} onPress={() => setCat(item)} />
         )}
       />
 

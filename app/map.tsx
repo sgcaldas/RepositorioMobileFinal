@@ -51,16 +51,10 @@ export default function MapScreen() {
   }
 
   // ⚠️ IMPORT DINÂMICO (só roda no nativo)
-  const MapView = require("react-native-maps").default as any;
-  const { Marker, PROVIDER_GOOGLE } = require("react-native-maps") as any;
-
   const region: Region = { ...pos, latitudeDelta: 0.01, longitudeDelta: 0.01 };
 
   return (
     <View style={s.container}>
-      <MapView style={StyleSheet.absoluteFill} initialRegion={region} provider={PROVIDER_GOOGLE}>
-        <Marker coordinate={pos} title="Você está aqui" />
-      </MapView>
     </View>
   );
 }
@@ -86,7 +80,6 @@ function WebFallback() {
     <View style={s.webBox}>
       <Text style={s.title}>Mapa (Web - Fallback)</Text>
       <Text style={s.note}>
-        <Text style={s.code}>react-native-maps</Text> é nativo e não roda no Web; aqui mostramos apenas sua localização.
       </Text>
       {coords ? (
         <Text style={s.coords}>

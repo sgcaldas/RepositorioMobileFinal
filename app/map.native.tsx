@@ -1,7 +1,6 @@
 // import * as Location from "expo-location";
 // import { useEffect, useState } from "react";
 // import { ActivityIndicator, Alert, StyleSheet, Text, View } from "react-native";
-// //import MapView, { Marker, PROVIDER_GOOGLE, Region } from "react-native-maps";
 
 // type Pos = { latitude: number; longitude: number };
 
